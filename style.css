@@ -362,3 +362,107 @@ main .voluntary-work {
     margin-top: 15px;
     text-align: center;
 }
+
+.skills .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.skills .container h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Space Mono", Arial, serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding-bottom: 50px;
+
+
+}
+
+.skills .container .skills-in-circle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.skills .container .skills-in-circle .skill-circle {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.skills .container .skills-in-circle .skill-circle .border-90 {
+    border-bottom: 5px solid;
+    width: 90%;
+    padding-bottom: 19px;
+    animation: animation90 2s infinite;
+    animation-direction: alternate;
+}
+
+.skills .container .skills-in-circle .skill-circle .border-80 {
+    border-bottom: 5px solid;
+    width: 90%;
+    padding-bottom: 19px;
+    animation: animation80 2s infinite;
+    animation-direction: alternate;
+}
+
+.skills .container .skills-in-circle .skill-circle .border-70 {
+    border-bottom: 5px solid;
+    width: 90%;
+    padding-bottom: 19px;
+    animation: animation70 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation70 {
+    0% {
+        border-image: linear-gradient(to right, #FF9000 70%, whitesmoke 30%) 5;
+    }
+
+    50% {
+        border-image: linear-gradient(to right, #9254029c 70%, whitesmoke 30%) 5;
+    }
+
+    100% {
+        border-image: linear-gradient(to right, #4b2b029c 70%, whitesmoke 30%) 5;
+    }
+
+}
+
+@keyframes animation80 {
+    0% {
+        border-image: linear-gradient(to right, #FF9000 80%, whitesmoke 20%) 5;
+    }
+
+    50% {
+        border-image: linear-gradient(to right, #9254029c 80%, whitesmoke 20%) 5;
+    }
+
+    100% {
+        border-image: linear-gradient(to right, #4b2b029c 80%, whitesmoke 20%) 5;
+    }
+
+}
+
+@keyframes animation90 {
+    0% {
+        border-image: linear-gradient(to right, #FF9000 90%, whitesmoke 10%) 5;
+    }
+
+    50% {
+        border-image: linear-gradient(to right, #9254029c 90%, whitesmoke 10%) 5;
+    }
+
+    100% {
+        border-image: linear-gradient(to right, #4b2b029c 90%, whitesmoke 10%) 5;
+    }
+
+}
