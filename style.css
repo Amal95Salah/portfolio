@@ -487,10 +487,24 @@ main .voluntary-work {
     padding-top: 70px;
 }
 
+
+
 .experince .experince_work {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact-us .container,
+    .voluntary-work .voluntary .voluntary-group,
+    .skills .container .skills-in-circle,
+    .experince .experince_work {
+        flex-direction: column;
+    }
+
+
 }
 
 .experince .experince_work h5 {
@@ -527,6 +541,11 @@ main .voluntary-work {
 
 .experince .experince_work .work-info .work-detail button {
     margin: 10px;
+    padding: 5px;
+}
+
+.experince .experince_work .work-info .work-detail p {
+    width: 70%;
 }
 
 .experince .experince_work .work-info .work-detail button:hover {
