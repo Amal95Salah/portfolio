@@ -20,39 +20,96 @@ body {
     margin: 0 auto;
 }
 
+.background_image {
+    background-image: url(images/AmalHome.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
 
-header .container img {
+.background_image_cover {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/profilePic.png);
+    background-size: cover;
+    background-color: transparent;
+
+
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
     border-radius: 50%;
     width: 20%;
 
 }
 
-.introduction {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 144, 0, 0.9);
+.intro {
+    padding-top: 30px;
 }
 
-.introduction h1 {
+.title {
     font-family: "Kaushan Script", cursive;
     font-size: 50px;
     line-height: 1.3;
     font-weight: 300;
     color: white;
-    padding-top: 30px;
+    white-space: nowrap;
+    /* padding-top: 30px; */
     transform: rotate(-5deg);
-
+    text-transform: uppercase;
+    border-right: 3px solid rgba(255, 255, 255, .75);
+    overflow: hidden;
+    /* transform: translateY(-50%); */
 }
 
-.introduction h3 {
-    font-family: "Space Mono", Arial, serif;
-    font-weight: 400;
+.line-1 {
+    padding-top: 140px;
+    transform: rotate(-5deg);
+    margin: 0 auto;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.anim-typewriter {
+    animation: typewriter 3s steps(20) infinite alternate;
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 8em;
+    }
+
+    100% {
+        width: 8em;
+    }
+}
+
+
+.position {
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 500;
     color: white;
     padding-top: 30px;
+    white-space: nowrap;
+    font-family: "Space Mono", Arial, serif;
+    text-transform: uppercase;
 }
 
 .social-icons {
@@ -67,90 +124,74 @@ header .container img {
 
 }
 
-.social-icons li:hover,
-.social-icons li:focus {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-}
-
 .social-icons li {
     padding: 5px;
 }
 
-header .container {
-    background-image: url(images/bg_h.jpg);
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-color: transparent;
-    background-attachment: fixed;
+
+.img_about {
+    margin-top: -60px;
+    margin-left: 35px;
+    object-fit: none;
 }
 
-main .about-me {
+.about-me {
     padding-top: 50px;
+    background: #f7f7f7;
 }
 
-main .about-me h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: black;
-    font-family: "Space Mono", Arial, serif;
-    font-weight: 400;
+.about-me .info {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
 }
 
-main .about-me .basic-info {
-    padding-left: 100px;
-    width: 50%;
+.about-me .basic-info {
+    width: 30%;
+    padding-bottom: 30px;
+    border: 20px solid #b8a07e;
 }
 
-main .about-me .description {
-    width: 50%;
+.about-me .description {
+    width: 60%;
+    margin-top: 20px;
+    margin: auto;
 }
 
-main .about-me .description p {
+.about-me .description p {
     width: 80%;
+    margin: auto;
 }
 
-main .about-me .basic-info .value {
+.about-me .basic-info .value {
     display: inline-block;
     color: rgba(0, 0, 0, 0.5);
 }
 
-main .about-me .basic-info .type {
+.about-me .basic-info .type {
     width: 30%;
     display: inline-block;
     color: #000;
     font-weight: bold;
 }
 
-main .about-me .basic-info li {
+.about-me .basic-info li {
     padding-top: 15px;
 }
 
-main .about-me .info {
-    display: flex;
-    padding-top: 50px;
-}
-
-
-
-main .my-resume {
-    padding-top: 200px;
-    padding-bottom: 200px;
+.my-resume {
+    padding-top: 100px;
+    padding-bottom: 30px;
     font-size: 30px;
     text-align: center;
+    background: #d2eaea3f;
 }
 
-main .my-resume a>h2:hover {
+.my-resume a>h2:hover {
     transform: scale(1.1);
 }
 
-main .my-resume h2 {
+.my-resume h2 {
     font-size: 40px;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -171,59 +212,132 @@ main .my-resume h2 {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: bold;
-    background: #e6e6e6;
+    background: #b8a07e;
 
 }
 
 .timeline .educations,
 .timeline .jobs {
     padding-top: 40px;
-}
-
-.timeline .education-odd,
-.timeline .job-odd {
-    width: 50%;
-    text-align: right;
-    padding-right: 20px;
-    clear: both;
-    padding-bottom: 30px;
-}
-
-.timeline .education-even,
-.timeline .job-even {
-    width: 50%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 900px;
     text-align: left;
-    padding-left: 20px;
-    float: right;
-    padding-bottom: 30px;
 }
 
-.timeline .educations .title,
-.timeline .jobs .title {
+.job {
+    width: 40%;
+    border-left: 3px solid #b8a07e;
+    border-style: dashed;
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+
+
+
+.timeline .jobs .titleJob {
 
     color: #000;
     font-family: "Space Mono",
         Arial,
         serif;
-    font-weight: 400;
-    margin: 0 0 20px 0;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    font-size: 20px;
 }
 
-.timeline .educations .company,
 .timeline .jobs .company {
-    display: block;
-    margin-bottom: 20px;
     font-size: 16px;
     font-weight: normal;
-    color: #bfbfbf;
+    color: #000;
 }
 
-.timeline .educations .technologies,
+.timeline .job .date {
+    font-size: 14px;
+    font-weight: 300;
+    color: hsl(0, 1%, 62%);
+
+}
+
 .timeline .jobs .technologies {
     font-size: 16px;
 }
 
-main .voluntary-work {
+.my-projects {
+    padding-top: 30px;
+    font-size: 30px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.projects {
+    padding-top: 40px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+
+.titleProject {
+    color: #000;
+    font-family: "Space Mono",
+        Arial,
+        serif;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    border-radius: 15px;
+}
+
+.card img {
+    padding-top: 10px;
+    height: 260px;
+    object-fit: contain;
+    width: 50%;
+    margin: auto;
+}
+
+.card p {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background: #b8a07e;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.voluntary-work {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -295,20 +409,7 @@ main .voluntary-work {
     line-height: 1.7;
 }
 
-/* .timeline:after {
-    top: 20px;
-    bottom: 0;
-    position: absolute;
-    content: " ";
-    width: 2px;
-    /* background-color: #e6e6e6; */
-/* background-color: red;
-    left: 50%;
-    margin-left: 0px;
-} */
-
-
-.contact-us .container {
+.contact-us .contact-container {
     display: flex;
     flex-direction: row;
     padding-top: 100px;
@@ -364,7 +465,7 @@ main .voluntary-work {
     text-align: center;
 }
 
-.skills .container {
+.skills .skills-container {
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -495,18 +596,6 @@ main .voluntary-work {
     justify-content: space-around;
 }
 
-@media screen and (max-width: 600px) {
-
-    .contact-us .container,
-    .voluntary-work .voluntary .voluntary-group,
-    .skills .container .skills-in-circle,
-    .experince .experince_work {
-        flex-direction: column;
-    }
-
-
-}
-
 .experince .experince_work h5 {
     padding-top: 15px;
     color: white;
@@ -555,3 +644,64 @@ main .voluntary-work {
     border-radius: 25px;
 
 }
+
+@media (max-width: 800px) {
+
+    .projects,
+    .jobs,
+    .info {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .basic-info {
+        visibility: hidden;
+    }
+
+    .project,
+    .job {
+        width: 100%;
+    }
+
+    .project {
+        padding-left: 0;
+    }
+
+    .background_image_cover {
+        background-image: none;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .background_image {
+        background-size: cover;
+    }
+}
+
+/* @media screen and (max-width: 700px) {
+
+    .contact-us .contact-container,
+    .voluntary-work .voluntary .voluntary-group,
+    .skills .contact-container .skills-in-circle,
+    .experince .experince_work {
+        flex-direction: column;
+    }
+
+    .background_image_cover {
+        background-image: none;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+
+} */
