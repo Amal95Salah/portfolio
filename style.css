@@ -439,6 +439,7 @@ header img {
   font-weight: normal;
   color: #bfbfbf;
   font-family: "Space Mono", Arial, serif;
+  line-height: 2;
 }
 
 .contact-us .container .contact {
